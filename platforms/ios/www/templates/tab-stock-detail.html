@@ -1,0 +1,35 @@
+<ion-view view-title="{{trend.name}}">
+  <ion-content class="">
+    <div class="item item-image">
+      <img src="{{trend.image}}">
+    </div>
+
+    <div class="item text-lg">
+      <star-rating rating="trend.rate"></star-rating>
+      <span class="assertive text-bold">{{trend.rate | number:1}}</span>
+    </div>
+    <div class="item item-icon-left positive">
+      <i class="icon ion-person-stalker"></i>
+      買った人：{{trend.holders}}人
+    </div>
+    <div class="item item-icon-left assertive">
+      <i class="icon ion-ios-heart"></i>
+      買いたい人：{{trend.wants}}人
+    </div>
+    <div class="item item-icon-left royal">
+      <i class="icon ion-cash"></i>
+      現在の株価：{{trend.price}}円<br />
+      購入単位：？株〜（？円〜）<br />
+    </div>
+    <div class="item item-icon-left balanced">
+      <i class="icon ion-bag"></i>
+      株主優待：????
+    </div>
+    <div class="item item-divider">
+      スコア・レビュー
+    </div>
+    <div class="list">
+      <comment-list comments="trend.comments"></comment-list>
+    </div>
+  </ion-content>
+</ion-view>

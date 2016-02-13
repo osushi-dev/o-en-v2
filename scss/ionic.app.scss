@@ -1,0 +1,205 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+//@import "./stocks.app";
+
+
+.text-lg {
+  font-size: 1.8em;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.unenergized {
+  color: #999;
+}
+
+.background, .background .pane, .background .item, .background .item-complex .item-content {
+  background-image: url("../img/leather.jpg");
+}
+
+.qrread-image, .qrread-image .pane, .qrread-image .item, .qrread-image .item-complex .item-content{
+  background-image: url("../img/qrread-image.jpg");
+  background-size:cover;
+}
+
+.pokete-icon,
+.pokete-icon:before {
+  color: red;
+}
+
+.card-height {
+  height: 265px;
+}
+
+.pokete-card {
+  background-image: url("../img/paper.jpg");
+  //background-color: red:
+  padding: 10px;
+  min-height: 270px;
+}
+.pokete-no {
+  font-weight: bold;
+}
+.pokete-title {
+  width: 100%;
+  //background-color: red;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8em;
+}
+.pokete-price {
+  width: 100%;
+  //background-color: red;
+  text-align: center;
+  font-family:serif;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 2.8em;
+  letter-spacing: 0.3em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.pokete-price-add {
+  width: 45%;
+  //background-color: red;
+  text-align: center;
+  font-family:serif;
+  font-weight: bold;
+  //text-decoration: underline;
+  font-size: 2.8em;
+  letter-spacing: 0.3em;
+  position: fixed;
+  top: 65px;
+  left: 195px;
+  background: white !important;
+}
+.pokete-price-add input{
+  font-size: 30px;
+}
+.pokete-date {
+  //font-weight: bold;
+  position: fixed;
+  top: 150px;
+  right: 30px;
+  //background-color: red;
+  text-align: right;
+}
+.pokete-limit {
+  //font-weight: bold;
+  position: fixed;
+  top: 170px;
+  right: 30px;
+  //background-color: red;
+  text-align: right;
+}
+.pokete-limit-add {
+  //font-weight: bold;
+  position: fixed;
+  top: 170px;
+  right: 105px;
+  //background-color: red;
+  text-align: right;
+}
+.pokete-limit-add-button {
+  //font-weight: bold;
+  position: fixed;
+  top: 160px;
+  right: 25px;
+  //background-color: red;
+  text-align: right;
+}
+.pokete-from {
+  position: fixed;
+  left: 200px;
+  top: 170px;
+}
+.pokete-qr {
+  //font-weight: bold;
+  position: fixed;
+  height: 100px;
+  width: auto;
+  //margin-left: 100px;
+  //background-color: red;
+  text-align: right;
+  top:170px;
+  left:30px;
+}
+.pokete-sign {
+  //font-weight: bold;
+  position: fixed;
+  height: 70px;
+  width: auto;
+  left: 240px;
+  top: 170px;
+  //background-color: red;
+  text-align: right;
+}
+.pokete-surugalogo {
+  //font-weight: bold;
+  position: fixed;
+  height: 50px;
+  width: auto;
+  right: 40px;
+  top: 230px;
+  //background-color: red;
+  text-align: right;
+}
+.received-bill {
+  margin-top:5px;
+  margin-bottom:0px;
+}
+.processed-stamp {
+  width:60%;
+  position:fixed;
+  right:-30px;
+  bottom:40px;
+}
+.receive-password{
+  margin-top:0px;
+  margin-bottom:0px;
+}
+.account-menu {
+  background-image: url("../img/leather_red.jpg") !important;
+  margin-top: 70px;
+  margin-right: 5px;
+  padding: -5px -5px -5px -5px;
+  //background: #EEE !important;
+  border-width: 2px;
+  border-radius: 30px;
+  border-color: #333;
+  height: 150px;
+  color: #122 !important;
+}
+.config-menu {
+  background: #EEE !important;
+  border-width: 2px;
+}
+.account-menu-button {
+  text-align: center;
+  margin-top: 15px;
+}
+.account-menu-button .icon{
+  font-size: 80px;
+}

@@ -1,0 +1,10 @@
+<div>
+  <div ng-repeat="comment in comments">
+    <div class="item item-avatar">
+      <img ng-src="{{comment.user.image}}">
+      <h2>{{comment.user.name}}</h2>
+      <star-rating rating="comment.rate"></star-rating>
+      <p>{{comment.comment}}</p>
+    </div>
+  </div>
+</div>

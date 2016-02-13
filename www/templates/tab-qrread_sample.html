@@ -1,0 +1,18 @@
+<ion-view view-title="手形受取">
+  <ion-content class="background">
+    <div class="card received-bill">
+      <div class="item-text-wrap">
+        <pokete-image pokete="poketes[2]"></pokete-image>
+        <img class="processed-stamp" src="img/processed.png" ng-show="show">
+      </div>
+    </div>
+    <i class="item item-input-inset receive-password icon icon-left ion-unlocked" style="font-size: 30px; color: #999933;">
+      <label class="item-input-wrapper" style="margin-left: 8px;">
+        <input type="password" placeholder="受取パスワードを入力">
+      </label>
+      <button on-tap="onTap()" class="button button-small">
+        受け取る
+      </button>
+    </i>
+  </ion-content>
+</ion-view>

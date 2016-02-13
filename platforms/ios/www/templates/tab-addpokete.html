@@ -1,0 +1,37 @@
+<ion-view view-title="手形作成">
+  <ion-content class="background">
+    <div class="row responsive-lg">
+      <div class=" card-height">
+        <div class="pokete-card">
+          <div class="pokete-id">No.<span ng-show="showno">0104865</span></div>
+          <div class="pokete-title">約束手形</div>
+          <div class="pokete-price">
+            ¥　　　　　　　　
+            <div class="item item-input pokete-price-add">
+              <input class="text-center" type="text" ng-model="price">
+            </div>
+          </div>
+          <div class="pokete-date" ng-controller="AddPoketeCtrl">発行日 {{date}}</div>
+          <div class="pokete-limit-add" ng-controller="AddPoketeCtrl">受取期限
+            <ionic-datepicker class="pokete-limit-add-button" input-obj="datepickerObject">
+              <button style="font-size:10pt;width:80px;padding:0 0 0 0;" class="button button-small button-light button-block"> {{datepickerObject.inputDate | date:datepickerObject.dateFormat}}</button>
+            </ionic-datepicker>
+          </div>
+          <img class="pokete-qr" src="img/qr.gif" ng-show="show">
+          <span class="pokete-from">振出人</span>
+          <img class="pokete-sign" src="img/sign.png">
+          <img class="pokete-surugalogo" src="img/surugalogo.png">
+
+        </div>
+      </div>
+    </div>
+    <div class="item item-input-inset receive-password icon icon-left ion-unlocked" style="font-size: 30px; color: #999933;">
+      <label class="item-input-wrapper" style="margin-left: 8px;">
+        <input type="password" placeholder="受取パスワードを入力">
+      </label>
+      <button on-tap="onTap()" class="button button-small" ng-click="showno=true">
+        発行する
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
