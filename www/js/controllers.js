@@ -58,6 +58,21 @@ angular.module('starter.controllers', [])
 })
 
 .controller('SurveyCtrl',  function($scope, CommonFunc, $ionicPopup, $ionicModal) {
+  $scope.showModal = function(){
+    var showPop = $ionicPopup.show({
+      templateUrl: '/templates/popup-survey.html',
+          title: 'アンケートにご協力ください',
+          scope: $scope,
+          buttons: [
+            { text: 'また今度'
+            },
+            {
+              text: '<b>回答する</b>',
+              type: 'button-positive'
+            }
+          ]
+    });
+  };
 
 })
 
