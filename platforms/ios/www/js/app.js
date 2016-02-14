@@ -101,7 +101,7 @@ angular.module('starter', [
     url: '/survey',
     views: {
       'tab-uploader': {
-        templateUrl: 'templates/survey.html',
+        templateUrl: 'templates/tab-survey.html',
         controller: 'SurveyCtrl'
       }
     }
@@ -114,10 +114,14 @@ angular.module('starter', [
         templateUrl: 'templates/tab-poketes.html',
         controller: 'PoketesCtrl'
       }
-    },
-    resolve: {
-      poketes: function(Pokete) {
-        return Pokete.all();
+    }
+  })
+  .state('tab.directnews', {
+    url: '/directnews',
+    views: {
+      'tab-poketes': {
+        templateUrl: 'templates/tab-directnews.html',
+        controller: 'DirectnewsCtrl'
       }
     }
   })
