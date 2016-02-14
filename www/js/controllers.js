@@ -7,6 +7,9 @@ angular.module('starter.controllers', [])
 })
 .controller('HistoryCtrl', function($scope) {
 })
+.controller('DirectnewsCtrl', function($scope) {
+
+})
 .controller('AddPoketeCtrl', function($scope, $filter, $ionicPopup, $state) {
   $scope.date = $filter("date")(Date.now(), 'yyyy/MM/dd');
   dt = $scope.date;

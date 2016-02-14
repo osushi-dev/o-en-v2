@@ -94,10 +94,14 @@ angular.module('starter', [
         templateUrl: 'templates/tab-poketes.html',
         controller: 'PoketesCtrl'
       }
-    },
-    resolve: {
-      poketes: function(Pokete) {
-        return Pokete.all();
+    }
+  })
+  .state('tab.directnews', {
+    url: '/directnews',
+    views: {
+      'tab-poketes': {
+        templateUrl: 'templates/tab-directnews.html',
+        controller: 'DirectnewsCtrl'
       }
     }
   })

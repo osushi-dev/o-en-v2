@@ -9884,11 +9884,12 @@ a.button {
   font-size: 80px; }
 
 #user-icon {
-  width: 130px;
-  -webkit-clip-path: circle(60px at center);
-  margin-bottom: -25px;
+  width: 100px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: -5px;
   border-width: 3px;
-  border-color: white;
+  border-color: #EEE;
   display: inline-block;
   box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8); }
 
@@ -9897,7 +9898,8 @@ a.button {
   padding-top: 10px;
   padding-bottom: 10px;
   margin: 0;
-  text-shadow: 1px 1px 3px #000; }
+  text-shadow: 1px 1px 3px #000;
+  font-weight: bold; }
 
 #bottom-tabbar {
   border-top: solid 3px #e74c3c;
@@ -9964,9 +9966,16 @@ th, td {
   float: right;
   padding-top: 10px; }
 
+.footer_more_info {
+  font-size: 16px;
+  padding-bottom: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px; }
+
 .list-group-item-logolist {
   height: 70px;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .logolist-item-logo-img {
   position: absolute;
@@ -9975,7 +9984,22 @@ th, td {
   max-width: 40%;
   top: 0;
   bottom: 0;
+  margin: auto;
+  overflow: hidden; }
+
+.logolist-item-logo-img-get {
+  position: absolute;
+  left: 5px;
+  max-height: 50px;
+  max-width: 30%;
+  top: 0;
+  bottom: 0;
   margin: auto; }
+
+.logolist-item-logo-date {
+  position: absolute;
+  top: 0px;
+  right: 10px; }
 
 .logolist-item-logo-name {
   position: absolute;
@@ -9991,13 +10015,87 @@ th, td {
 .logolist-item-logo-point-number {
   font-size: 34px; }
 
+.list-group-news-logolist {
+  height: 130px;
+  position: relative;
+  overflow: hidden; }
+
+.logolist-news-logo-new {
+  z-index: 999;
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 5px;
+  background-color: rgba(234, 245, 67, 0.7); }
+
+.logolist-news-logo-img {
+  position: absolute;
+  left: 0;
+  max-width: 40%;
+  top: 0;
+  margin: auto; }
+
+.logolist-news-text {
+  position: absolute;
+  font-weight: bold;
+  font-size: 20px;
+  top: 0px;
+  right: 5px;
+  max-width: 55%; }
+
+.logolist-news-text p {
+  position: absolute;
+  font-size: 15px;
+  right: 5px; }
+
+.logolist-news-maker {
+  position: absolute;
+  font-size: 12px;
+  bottom: 0px;
+  right: 5px; }
+
+.direct-new-message {
+  z-index: 999;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 5px;
+  background-color: rgba(234, 245, 67, 0.7); }
+
+.direct-new-message-title {
+  font-weight: bold;
+  font-size: 17px; }
+
+.direct-new-message-img {
+  position: relative;
+  left: 0;
+  max-width: 40%; }
+
+.direct-new-message-info {
+  float: right;
+  padding-top: 10px;
+  max-width: 40%; }
+
+.direct-new-message-info-header {
+  font-size: 15px; }
+
+.direct-new-message-info-text {
+  font-size: 20px; }
+
+.direct-new-message-text {
+  padding-top: 10px; }
+
 .content {
   border-top: solid 3px #e74c3c;
   /* border-left: solid 5px rgba(231, 76, 60, 1.0); */
   margin-bottom: 10px;
   background-color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0;
+  padding-right: 0;
   margin-left: 0;
   margin-right: 0;
   border-bottom: solid 2px #ddd4c0; }
