@@ -1,9 +1,61 @@
 angular.module('starter.controllers', [])
-
-.controller('PoketesCtrl', function($scope, poketes) {
-  $scope.poketes = poketes;
-  console.log("poketes", poketes);
+.controller('PoketesCtrl', function($scope) {
 })
+.controller('MakerCtrl', function($scope) {
+})
+.controller('NewsCtrl', function($scope) {
+})
+.controller('HistoryCtrl', function($scope) {
+})
+.controller('UploaderCtrl', function($scope, Camera, CommonFunc, SendAjax, $ionicPopup, $ionicListDelegate) {
+
+  var init = function(){
+        $scope.data = {};
+        $scope.data.defaultammount = 100000;
+        $scope.pic = null;
+    }
+    $scope.$on('$ionicView.beforeEnter', init);
+
+    //フォトライブラリー起動メソッド
+    var cameraOpt = {
+      quality: 50,
+      destinationType: 0,
+      encodingType: 0,
+      cameraDirection: 0,
+      sourceType: 1
+    };
+
+    $scope.takePhoto = function(){
+      Camera.getPicture(cameraOpt).then(function(img) {
+        console.log(img);
+        $scope.pic = img;
+      }, function(err) {
+        console.err(err);
+      });
+    }
+
+    $scope.sendPhoto = function(){
+
+      var requestPop = $ionicPopup.confirm({
+        title: 'リクエスト実行確認',
+        template: 'この写真でリクエストを送ります。よろしいですか？'
+      });
+
+      requestPop.then(function(res) {
+        $ionicListDelegate.closeOptionButtons();
+        if(res) {
+          CommonFunc.navigate("tab.survey");
+        } else {
+          $scope.pic = null;
+        }
+      });
+    };
+})
+
+.controller('SurveyCtrl',  function($scope, CommonFunc, $ionicPopup) {
+
+})
+
 .controller('AddPoketeCtrl', function($scope, $filter, $ionicPopup, $state) {
   $scope.date = $filter("date")(Date.now(), 'yyyy/MM/dd');
   dt = $scope.date;

@@ -1,0 +1,12 @@
+<ion-view view-title="レシート撮影">
+  <ion-content>
+    <div class="content">
+        <h4 class="headline">レシート送信</h4>
+    </div>
+    <img ng-if="pic != null && pic != ''" class="pic" src="data:image/png;base64,{{pic}}">
+  </ion-content>
+  <ion-footer-bar>
+    <button ng-if="pic == null || pic == ''" class="button button-block button-positive" nav-direction="forward" on-tap="takePhoto()">レシートを撮る</button>
+    <button ng-if="pic != null && pic != ''" class="button button-block button-positive" nav-direction="forward" on-tap="sendPhoto()">送信</button>
+  </ion-fotter-bar>
+</ion-view>

@@ -87,6 +87,26 @@ angular.module('starter', [
     }
   })
 
+  .state('tab.uploader', {
+    url: '/uploader',
+    views: {
+      'tab-uploader': {
+        templateUrl: 'templates/tab-uploader.html',
+        controller: 'UploaderCtrl'
+      }
+    }
+  })
+
+  .state('tab.survey', {
+    url: '/survey',
+    views: {
+      'tab-uploader': {
+        templateUrl: 'templates/tab-survey.html',
+        controller: 'SurveyCtrl'
+      }
+    }
+  })
+
   .state('tab.poketes', {
     url: '/poketes',
     views: {
