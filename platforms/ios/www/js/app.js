@@ -67,6 +67,16 @@ angular.module('starter', [
     }
   })
 
+  .state('tab.makerdetail', {
+    url: '/makerdetail',
+    views: {
+      'tab-maker': {
+        templateUrl: 'templates/tab-makerdetail.html',
+        controller: 'MakerDetailCtrl'
+      }
+    }
+  })
+
   .state('tab.news', {
     url: '/news',
     views: {

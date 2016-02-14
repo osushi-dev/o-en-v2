@@ -3,6 +3,8 @@ angular.module('starter.controllers', [])
 })
 .controller('MakerCtrl', function($scope) {
 })
+.controller('MakerDetailCtrl', function($scope) {
+})
 .controller('NewsCtrl', function($scope) {
 })
 .controller('HistoryCtrl', function($scope) {
@@ -56,31 +58,21 @@ angular.module('starter.controllers', [])
 })
 
 .controller('SurveyCtrl',  function($scope, CommonFunc, $ionicPopup, $ionicModal) {
-  $ionicModal.fromTemplateUrl('tab-survey.html', function(modal) {
-    $scope.modal = modal;
-  }, {
-    scope: $scope,
-    animation: 'slide-in-up'
-  });
-
-   $scope.openModal = function() {
-      $scope.modal.show();
-   };
-   $scope.closeModal = function() {
-      $scope.modal.hide();
-   };
-   //Cleanup the modal when we're done with it!
-   $scope.$on('$destroy', function() {
-      $scope.modal.remove();
-   });
-   // Execute action on hide modal
-   $scope.$on('modal.hidden', function() {
-      // Execute action
-   });
-   // Execute action on remove modal
-   $scope.$on('modal.removed', function() {
-      // Execute action
-   });
+  $scope.showModal = function(){
+    var showPop = $ionicPopup.show({
+      templateUrl: '/templates/popup-survey.html',
+          title: 'アンケートにご協力ください',
+          scope: $scope,
+          buttons: [
+            { text: 'また今度'
+            },
+            {
+              text: '<b>回答する</b>',
+              type: 'button-positive'
+            }
+          ]
+    });
+  };
 
 })
 
