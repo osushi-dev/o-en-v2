@@ -1,8 +1,11 @@
 angular.module('starter.controllers', [])
-
-.controller('PoketesCtrl', function($scope, poketes) {
-  $scope.poketes = poketes;
-  console.log("poketes", poketes);
+.controller('PoketesCtrl', function($scope) {
+})
+.controller('MakerCtrl', function($scope) {
+})
+.controller('NewsCtrl', function($scope) {
+})
+.controller('HistoryCtrl', function($scope) {
 })
 .controller('AddPoketeCtrl', function($scope, $filter, $ionicPopup, $state) {
   $scope.date = $filter("date")(Date.now(), 'yyyy/MM/dd');
