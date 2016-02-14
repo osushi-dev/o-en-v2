@@ -9741,6 +9741,7 @@ a.button {
   color: #999; }
 
 .background, .background .pane, .background .item, .background .item-complex .item-content {
+  padding-top: 20px;
   background-color: #EEE; }
 
 .qrread-image, .qrread-image .pane, .qrread-image .item, .qrread-image .item-complex .item-content {
