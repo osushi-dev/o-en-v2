@@ -47,6 +47,66 @@ angular.module('starter', [
     templateUrl: 'templates/tabs.html'
   })
 
+  .state('tab.mypage', {
+    url: '/mypage',
+    views: {
+      'tab-mypage': {
+        templateUrl: 'templates/tab-mypage.html',
+        controller: 'MypageCtrl'
+      }
+    }
+  })
+
+  .state('tab.maker', {
+    url: '/maker',
+    views: {
+      'tab-maker': {
+        templateUrl: 'templates/tab-maker.html',
+        controller: 'MakerCtrl'
+      }
+    }
+  })
+
+  .state('tab.news', {
+    url: '/news',
+    views: {
+      'tab-news': {
+        templateUrl: 'templates/tab-news.html',
+        controller: 'NewsCtrl'
+      }
+    }
+  })
+
+  .state('tab.history', {
+    url: '/history',
+    views: {
+      'tab-history': {
+        templateUrl: 'templates/tab-history.html',
+        controller: 'HistoryCtrl'
+      }
+    }
+  })
+
+  .state('tab.uploader', {
+    url: '/uploader',
+    views: {
+      'tab-uploader': {
+        templateUrl: 'templates/tab-uploader.html',
+        controller: 'UploaderCtrl'
+      }
+    }
+  })
+
+  .state('tab.survey', {
+    url: '/survey',
+    views: {
+      'tab-uploader': {
+        templateUrl: 'templates/survey.html',
+        controller: 'SurveyCtrl'
+      }
+    }
+  })
+
   .state('tab.poketes', {
     url: '/poketes',
     views: {

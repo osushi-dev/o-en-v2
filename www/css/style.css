@@ -251,6 +251,14 @@ h4 {
     background-color: white;
     border-bottom: solid 2px rgba(221, 212, 192, 1.0);
 }
+
+.pic{
+  width: 100%;
+  height: auto;
+}
+
+
+
 @font-face{
 font-family:'HuiFontP109';
 src:url('https://dl.dropboxusercontent.com/s/6snqvg654tirsyv/HuiFontP109.eot');

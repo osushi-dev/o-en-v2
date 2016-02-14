@@ -1,28 +1,78 @@
-<ion-view view-title="手形一覧">
+<ion-view view-title="マイページ">
   <ion-content class="background">
-    <!--
-    <br />
-    <div class="text-center">
-      <a class="button button-icon icon ion-plus-circled pokete-icon" ui-sref="tab.addpokete"></a>
-    </div>
-  -->
-    <div class="row responsive-lg">
-      <div collection-repeat="pokete in poketes" class="">
-        <div class="col">
-          <div class="card card-height">
-            <div class="">
-              <pokete-image pokete="pokete"></pokete-image>
-            </div>
+    <div class="content" align="center" style="background-image: url('img/user-back-cute.png'); background-size:auto; background-position:center;">
+          <div class="css-box-shadow">
+            <img id="user-icon" src="img/user-sazae.jpg" class="img-thumbnail" alt="User-thumbnail">
           </div>
-        </div>
+          <h4 id="user-name">サザエ さん</h4>
+    </div>
+
+    <div class="content">
+        <h4 class="headline">保有ポイント<a href="#/tab/maker" class="header_more_info">もっと見る...</a></h4>
+        <div class="list-group">
+          <a href="https://www.asahibeer.co.jp/park/" class="list-group-item list-group-item-logolist" target="_blank">
+            <img src="img/maker/logo_asahipark.png" class="logolist-item-logo-img" />
+            <h4 class="logolist-item-logo-name">アサヒビール</h4>
+            <div class="logolist-item-logo-point">
+                <span class="logolist-item-logo-point-number">2,400</span> ポイント
+            </div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-logolist">
+            <img src="img/maker/logo_suntorytown.png" class="logolist-item-logo-img" />
+            <h4 class="logolist-item-logo-name">サントリー</h4>
+            <div class="logolist-item-logo-point">
+                <span class="logolist-item-logo-point-number">1,200</span> ポイント
+            </div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-logolist">
+            <img src="img/maker/logo_cocacolapark.png" class="logolist-item-logo-img" />
+            <h4 class="logolist-item-logo-name">コカ・コーラ</h4>
+            <div class="logolist-item-logo-point">
+                <span class="logolist-item-logo-point-number">900</span> ポイント
+            </div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-logolist">
+            <img src="img/maker/logo_watashiplus.gif" class="logolist-item-logo-img" />
+            <h4 class="logolist-item-logo-name">資生堂</h4>
+            <div class="logolist-item-logo-point">
+                <span class="logolist-item-logo-point-number">200</span> ポイント
+            </div>
+          </a>
       </div>
     </div>
 
-<!--
-    <div class="text-center">
-      <a class="button button-icon icon ion-plus-circled pokete-icon" ui-sref="tab.addpokete"></a>
+    <div class="content">
+        <h4 class="headline">お得なお知らせ<a href="/listoenmaker" class="header_more_info">もっと見る...</a></h4>
+        <div class="list-group">
+          <a href="https://www.asahibeer.co.jp/park/" class="list-group-item list-group-item-logolist" target="_blank">
+            <img src="img/maker/logo_asahipark.png" class="logolist-item-logo-img" />
+            <h4 class="logolist-item-logo-name">アサヒビール</h4>
+            <div class="logolist-item-logo-point">
+                <span class="logolist-item-logo-point-number">2,400</span> ポイント
+            </div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-logolist">
+            <img src="img/maker/logo_suntorytown.png" class="logolist-item-logo-img" />
+            <h4 class="logolist-item-logo-name">サントリー</h4>
+            <div class="logolist-item-logo-point">
+                <span class="logolist-item-logo-point-number">1,200</span> ポイント
+            </div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-logolist">
+            <img src="img/maker/logo_cocacolapark.png" class="logolist-item-logo-img" />
+            <h4 class="logolist-item-logo-name">コカ・コーラ</h4>
+            <div class="logolist-item-logo-point">
+                <span class="logolist-item-logo-point-number">900</span> ポイント
+            </div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-logolist">
+            <img src="img/maker/logo_watashiplus.gif" class="logolist-item-logo-img" />
+            <h4 class="logolist-item-logo-name">資生堂</h4>
+            <div class="logolist-item-logo-point">
+                <span class="logolist-item-logo-point-number">200</span> ポイント
+            </div>
+          </a>
+      </div>
     </div>
-    <br />
-  -->
   </ion-content>
 </ion-view>
