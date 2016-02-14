@@ -3,6 +3,8 @@ angular.module('starter.controllers', [])
 })
 .controller('MakerCtrl', function($scope) {
 })
+.controller('MakerDetailCtrl', function($scope) {
+})
 .controller('NewsCtrl', function($scope) {
 })
 .controller('HistoryCtrl', function($scope) {

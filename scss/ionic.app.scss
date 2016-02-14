@@ -426,6 +426,43 @@ th, td	{
   padding-top: 10px;
 }
 
+.maker-detail-logo-img{
+    max-height: 70px;
+    text-align: center;
+    margin-bottom:40px;
+}
+.maker-detail-point-header{
+  text-align: left;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.maker-detail-point{
+  text-align: right;
+  margin-right: 20px;
+}
+.maker-detail-point-number{
+    font-size: 40px;
+}
+.maker-detail-item-date{
+    position:absolute;
+    top:0px;
+    left:20px;
+}
+.maker-detail-item-point{
+    position:absolute;
+    top:0px;
+    right:10px;
+    font-size: 18px;
+}
+.maker-detail-item-point-number{
+    font-size: 30px;
+}
+.maker-detail-item-info{
+  position:absolute;
+  top:40px;
+  left:20px;
+}
+
 .content{
   border-top: solid 3px rgba(231, 76, 60, 1.0);
   /* border-left: solid 5px rgba(231, 76, 60, 1.0); */
