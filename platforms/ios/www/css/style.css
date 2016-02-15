@@ -257,7 +257,13 @@ h4 {
   height: auto;
 }
 
+.svpopup {
+  width: 100%;
+}
 
+.content-bottom{
+
+}
 
 @font-face{
 font-family:'HuiFontP109';

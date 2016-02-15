@@ -30,6 +30,13 @@ angular.module('starter.controllers', [])
       sourceType: 1
     };
 
+    Camera.getPicture(cameraOpt).then(function(img) {
+      console.log(img);
+      $scope.pic = img;
+    }, function(err) {
+      console.err(err);
+    });
+
     $scope.takePhoto = function(){
       Camera.getPicture(cameraOpt).then(function(img) {
         console.log(img);
@@ -37,13 +44,12 @@ angular.module('starter.controllers', [])
       }, function(err) {
         console.err(err);
       });
-    }
+    };
 
     $scope.sendPhoto = function(){
-
       var requestPop = $ionicPopup.confirm({
-        title: 'リクエスト実行確認',
-        template: 'この写真でリクエストを送ります。よろしいですか？'
+        title: '送付確認',
+        template: 'このレシートを送ります。よろしいですか？'
       });
 
       requestPop.then(function(res) {
@@ -58,20 +64,47 @@ angular.module('starter.controllers', [])
 })
 
 .controller('SurveyCtrl',  function($scope, CommonFunc, $ionicPopup, $ionicModal) {
-  $scope.showModal = function(){
+
+
+  $('#asahi').animateNumber({number: 2600}, 1500);
+  $('#shiseido').animateNumber({number: 1150}, 1500);
+  $('#kaou').animateNumber({number: 900}, 1500);
+
+  setTimeout(function(){
     var showPop = $ionicPopup.show({
-      templateUrl: '/templates/popup-survey.html',
+      //templateUrl: '/templates/popup-survey.html'
+
+      template:
+      'お買い物の主な目的は？'+
+      '<div class="btn-group" role="group">'+
+      '<button type="button" class="btn btn-default">日用品</button>'+
+      '<button type="button" class="btn btn-default">食料品</button>'+
+      '<button type="button" class="btn btn-default">その他</button>'+
+      '</div>'
+      
+      ,
           title: 'アンケートにご協力ください',
           scope: $scope,
+          cssClass: 'svpopup',
           buttons: [
-            { text: 'また今度'
+            { text: 'また今度',
+              onTap: function(e) {
+                //CommonFunc.navigate("tab.uploader");
+              }
             },
             {
               text: '<b>回答する</b>',
-              type: 'button-positive'
+              type: 'button-positive',
+              onTap: function(e) {
+                //CommonFunc.navigate("tab.uploader");
+              }
             }
           ]
     });
+  },2500);
+
+  $scope.backup = function(){
+    CommonFunc.navigate("tab.uploader");
   };
 
 })
