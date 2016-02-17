@@ -1,5 +1,24 @@
 angular.module('starter.controllers', [])
-.controller('PoketesCtrl', function($scope) {
+.controller('PoketesCtrl', function($scope, CommonFunc) {
+  var init = function(){
+        $scope.alerm = false;
+  }
+
+  $scope.switchAlerm = function(){
+    if($scope.alerm==true){
+      $scope.alerm=false;
+    }else{
+      $scope.alerm=true;
+    }
+  };
+
+  $scope.goDirect = function(){
+    $scope.alerm=false;
+    CommonFunc.navigate("tab.directnews");
+  };
+
+
+
 })
 .controller('MakerCtrl', function($scope) {
 })
@@ -18,49 +37,49 @@ angular.module('starter.controllers', [])
         $scope.data = {};
         $scope.data.defaultammount = 100000;
         $scope.pic = null;
-    }
-    $scope.$on('$ionicView.beforeEnter', init);
+  }
+  $scope.$on('$ionicView.beforeEnter', init);
 
-    //フォトライブラリー起動メソッド
-    var cameraOpt = {
+  //フォトライブラリー起動メソッド
+  var cameraOpt = {
       quality: 50,
       destinationType: 0,
       encodingType: 0,
       cameraDirection: 0,
       sourceType: 1
-    };
+  };
 
+  Camera.getPicture(cameraOpt).then(function(img) {
+    console.log(img);
+    $scope.pic = img;
+  }, function(err) {
+    console.err(err);
+  });
+
+  $scope.takePhoto = function(){
     Camera.getPicture(cameraOpt).then(function(img) {
       console.log(img);
       $scope.pic = img;
     }, function(err) {
       console.err(err);
     });
+  };
 
-    $scope.takePhoto = function(){
-      Camera.getPicture(cameraOpt).then(function(img) {
-        console.log(img);
-        $scope.pic = img;
-      }, function(err) {
-        console.err(err);
-      });
-    };
+  $scope.sendPhoto = function(){
+    var requestPop = $ionicPopup.confirm({
+      title: '送付確認',
+      template: 'このレシートを送ります。よろしいですか？'
+    });
 
-    $scope.sendPhoto = function(){
-      var requestPop = $ionicPopup.confirm({
-        title: '送付確認',
-        template: 'このレシートを送ります。よろしいですか？'
-      });
-
-      requestPop.then(function(res) {
-        $ionicListDelegate.closeOptionButtons();
-        if(res) {
-          CommonFunc.navigate("tab.survey");
-        } else {
-          $scope.pic = null;
-        }
-      });
-    };
+    requestPop.then(function(res) {
+      $ionicListDelegate.closeOptionButtons();
+      if(res) {
+        CommonFunc.navigate("tab.survey");
+      } else {
+        $scope.pic = null;
+      }
+    });
+  };
 })
 
 .controller('SurveyCtrl',  function($scope, CommonFunc, $ionicPopup, $ionicModal) {
@@ -81,7 +100,7 @@ angular.module('starter.controllers', [])
       '<button type="button" class="btn btn-default">食料品</button>'+
       '<button type="button" class="btn btn-default">その他</button>'+
       '</div>'
-      
+
       ,
           title: 'アンケートにご協力ください',
           scope: $scope,
