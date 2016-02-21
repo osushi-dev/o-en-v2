@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.ionicframework.stocks911813"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.stocks911813"
         }
     },
     "dependent_plugins": {}

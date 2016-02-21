@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic','ngCordova'])
 .controller('PoketesCtrl', function($scope, CommonFunc) {
   var init = function(){
         $scope.alerm = false;
@@ -24,11 +24,41 @@ angular.module('starter.controllers', [])
 })
 .controller('MakerDetailCtrl', function($scope) {
 })
-.controller('NewsCtrl', function($scope) {
+.controller('NewsCtrl', function($scope, $cordovaInAppBrowser) {
+  var options = {
+      location: 'no',
+      clearcache: 'yes',
+      toolbar: 'yes'
+   };
+
+   $scope.openURL = function(url) {
+      $cordovaInAppBrowser.open(url, '_blank', options)
+      .then(function(event) {
+         // success
+      })
+      .catch(function(event) {
+         // error
+      });
+   }
 })
 .controller('HistoryCtrl', function($scope) {
 })
-.controller('DirectnewsCtrl', function($scope) {
+.controller('DirectnewsCtrl', function($scope, $cordovaInAppBrowser) {
+  var options = {
+      location: 'no',
+      clearcache: 'yes',
+      toolbar: 'yes'
+   };
+
+   $scope.openURL = function(url) {
+      $cordovaInAppBrowser.open(url, '_blank', options)
+      .then(function(event) {
+         // success
+      })
+      .catch(function(event) {
+         // error
+      });
+   }
 
 })
 .controller('UploaderCtrl', function($scope, Camera, CommonFunc, SendAjax, $ionicPopup, $ionicListDelegate) {
@@ -85,9 +115,9 @@ angular.module('starter.controllers', [])
 .controller('SurveyCtrl',  function($scope, CommonFunc, $ionicPopup, $ionicModal) {
 
 
-  $('#asahi').animateNumber({number: 2600}, 1500);
-  $('#shiseido').animateNumber({number: 1150}, 1500);
-  $('#kaou').animateNumber({number: 900}, 1500);
+  $('#ajinomoto').animateNumber({number: 2600}, 1500);
+  $('#asahi').animateNumber({number: 1150}, 1500);
+  $('#shiseido').animateNumber({number: 900}, 1500);
 
   setTimeout(function(){
     var showPop = $ionicPopup.show({
