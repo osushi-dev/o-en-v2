@@ -1,9 +1,9 @@
 <ion-view view-title="マイページ">
   <ion-content class="background">
     <div class="content" align="center" style="background-image: url('img/user-back-cute.png'); background-size:auto; background-position:center;">
-          <!--
-          <a class="direct-new-message animated bounceInRight " href="#/tab/directnews">でも子さんへのメッセージが届いています！</a>
-          -->
+
+          <a ng-if="alerm" class="direct-new-message animated bounceInRight " on-tap="goDirect()">でも子さんへのメッセージが届いています！</a>
+
           <div class="tablebody">
             <div class="tbleft" on-tap="switchAlerm()" >
             </div>
@@ -14,10 +14,12 @@
               <h4 id="user-name">のむら でも子 さん</h4>
             </div>
             <div class="tbright animated infinite tada" on-tap="goDirect()">
+              <!--
               <div ng-if="alerm">
                 <img id="alert-icon" src="img/megaphone.png" class="circle-frame" alt="alerm-thumbnail" >
                 <h4>ＮＥＷ</h4>
               </div>
+              -->
             </div>
           </div>
     </div>
