@@ -1,5 +1,5 @@
 angular.module('starter.controllers', ['ionic','ngCordova'])
-.controller('PoketesCtrl', function($scope, CommonFunc) {
+.controller('PoketesCtrl', function($scope, CommonFunc, $cordovaInAppBrowser) {
   var init = function(){
         $scope.alerm = false;
   }
@@ -17,12 +17,41 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
     CommonFunc.navigate("tab.directnews");
   };
 
+  var options = {
+      location: 'no',
+      clearcache: 'yes',
+      toolbar: 'yes'
+   };
 
+   $scope.openURL = function(url) {
+      $cordovaInAppBrowser.open(url, '_system', options)
+      .then(function(event) {
+         // success
+      })
+      .catch(function(event) {
+         // error
+      });
+   };
 
 })
 .controller('MakerCtrl', function($scope) {
 })
-.controller('MakerDetailCtrl', function($scope) {
+.controller('MakerDetailCtrl', function($scope, $cordovaInAppBrowser) {
+  var options = {
+      location: 'no',
+      clearcache: 'yes',
+      toolbar: 'yes'
+   };
+
+   $scope.openURL = function(url) {
+      $cordovaInAppBrowser.open(url, '_system', options)
+      .then(function(event) {
+         // success
+      })
+      .catch(function(event) {
+         // error
+      });
+   };
 })
 .controller('NewsCtrl', function($scope, $cordovaInAppBrowser) {
   var options = {
@@ -32,14 +61,14 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
    };
 
    $scope.openURL = function(url) {
-      $cordovaInAppBrowser.open(url, '_blank', options)
+      $cordovaInAppBrowser.open(url, '_system', options)
       .then(function(event) {
          // success
       })
       .catch(function(event) {
          // error
       });
-   }
+   };
 })
 .controller('HistoryCtrl', function($scope) {
 })
@@ -51,7 +80,7 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
    };
 
    $scope.openURL = function(url) {
-      $cordovaInAppBrowser.open(url, '_blank', options)
+      $cordovaInAppBrowser.open(url, '_system', options)
       .then(function(event) {
          // success
       })
