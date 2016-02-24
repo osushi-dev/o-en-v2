@@ -46,6 +46,8 @@
 		AED91E30094945058807D77D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 544EC2085C8E452BBC8933ED /* CoreLocation.framework */; };
 		6F112949F17D49B7A9529951 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DCDB7078A2458AA8DDCBD3 /* AVFoundation.framework */; };
 		D424AB01D7284C8AABC17DDA /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F3515923C042D4B5739CE9 /* CDVInAppBrowser.m */; };
+		052164B417824673BD719856 /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF56BAED4E84396AE41CE5F /* AppDelegate+notification.m */; };
+		0A43704BD4A34FEA8D3D3442 /* PushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9055E2FA7844DD8D70E13F /* PushPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,10 @@
 		24DCDB7078A2458AA8DDCBD3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		71F3515923C042D4B5739CE9 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		903D8A3E02AB433C9EE59407 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		AAF56BAED4E84396AE41CE5F /* AppDelegate+notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+notification.m"; path = "com.phonegap.plugins.PushPlugin/AppDelegate+notification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		AF9055E2FA7844DD8D70E13F /* PushPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PushPlugin.m"; path = "com.phonegap.plugins.PushPlugin/PushPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		98FB0734D7A241D8A54BF876 /* AppDelegate+notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+notification.h"; path = "com.phonegap.plugins.PushPlugin/AppDelegate+notification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		1C6DC4BEC6F24254A0147FCB /* PushPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PushPlugin.h"; path = "com.phonegap.plugins.PushPlugin/PushPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +240,10 @@
 				AAA01B85D9EA41A59384F0B6 /* CDVExif.h */,
 				71F3515923C042D4B5739CE9 /* CDVInAppBrowser.m */,
 				903D8A3E02AB433C9EE59407 /* CDVInAppBrowser.h */,
+				AAF56BAED4E84396AE41CE5F /* AppDelegate+notification.m */,
+				AF9055E2FA7844DD8D70E13F /* PushPlugin.m */,
+				98FB0734D7A241D8A54BF876 /* AppDelegate+notification.h */,
+				1C6DC4BEC6F24254A0147FCB /* PushPlugin.h */,
 			);
 			name = Plugins;
 			path = o-en/Plugins;
@@ -427,6 +437,8 @@
 				381613962AA745AE9FB22B92 /* CDVCamera.m in Sources */,
 				1BCD7FB61AE64AC992467BEC /* CDVJpegHeaderWriter.m in Sources */,
 				D424AB01D7284C8AABC17DDA /* CDVInAppBrowser.m in Sources */,
+				052164B417824673BD719856 /* AppDelegate+notification.m in Sources */,
+				0A43704BD4A34FEA8D3D3442 /* PushPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

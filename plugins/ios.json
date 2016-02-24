@@ -12,6 +12,9 @@
         },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.ionicframework.stocks911813"
+        },
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "com.ionicframework.stocks911813"
         }
     },
     "dependent_plugins": {}

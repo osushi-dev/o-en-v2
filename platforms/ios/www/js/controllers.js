@@ -119,7 +119,9 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
   $('#asahi').animateNumber({number: 1150}, 1500);
   $('#shiseido').animateNumber({number: 900}, 1500);
 
-  setTimeout(function(){
+
+  //setTimeout(function(){
+  $scope.showPopup = function(){
     var showPop = $ionicPopup.show({
       //templateUrl: '/templates/popup-survey.html'
 
@@ -150,7 +152,9 @@ angular.module('starter.controllers', ['ionic','ngCordova'])
             }
           ]
     });
-  },2500);
+  }
+  //,2500)
+  ;
 
   $scope.backup = function(){
     CommonFunc.navigate("tab.uploader");
